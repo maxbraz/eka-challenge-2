@@ -7,10 +7,6 @@ export const addressUpdate = () => ({
   type: ADDRESS_REQUEST,
 });
 
-export const addressUpdate = () => ({
-  type: ADDRESS_SUCCESS,
-});
-
 export const addressError = message => ({
   type: ADDRESS_FAILURE,
   message,

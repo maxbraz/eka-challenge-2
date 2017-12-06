@@ -35,4 +35,4 @@ const nameAndPhone = (state = {
   }
 };
 
-export default signup;
+export default nameAndPhone;

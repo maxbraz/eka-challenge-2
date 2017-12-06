@@ -118,10 +118,7 @@ class Signup extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  userId: state.auth.userId,
-  profile: state.user.profile,
-  hasUserInfo: state.user.hasInfo,
-  influenceInfo: state.influence,
+  email: state.email,
 });
 
 export default withRouter(connect(mapStateToProps)(Signup));

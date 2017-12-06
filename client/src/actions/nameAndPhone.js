@@ -3,11 +3,11 @@ export const NAMEANDPHONE_SUCCESS = 'NAMEANDPHONE_SUCCESS';
 export const NAMEANDPHONE_FAILURE = 'NAMEANDPHONE_FAILURE';
 
 
-export const nameAndPhoneUpdate = () => ({
+export const requestNameAndPhoneUpdate = () => ({
   type: NAMEANDPHONE_REQUEST,
 });
 
-export const receiveUpdate = () => ({
+export const receiveNameAndPhoneUpdate = () => ({
   type: NAMEANDPHONE_SUCCESS,
 });
 
