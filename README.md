@@ -1,5 +1,8 @@
 # Startup Instructions
 
+git clone repo
+cd into repo
+npm install all dependencies
 npm run start:dev
 npm run build:watch
 npm run migrate:latest
