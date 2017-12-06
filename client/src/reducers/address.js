@@ -8,7 +8,7 @@ const address = (state = {
   isFetching: false,
   hasSaved: false,
   errorMessage: '',
-  userId: null,
+  id: '',
 }, action) => {
   switch (action.type) {
   case ADDRESS_REQUEST:
@@ -22,7 +22,7 @@ const address = (state = {
       isFetching: false,
       hasSaved: true,
       errorMessage: '',
-      userId: action.userId,
+      id: action.id,
     };
   case ADDRESS_FAILURE:
     return {

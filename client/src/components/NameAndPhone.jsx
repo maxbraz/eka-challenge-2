@@ -40,12 +40,13 @@ class NameAndPhone extends React.Component {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       phoneNumber: this.state.phoneNumber,
+      id: this.props.id,
     }
 
     axios.post('/nameAndPhone', params)
     .then((response) => {
       console.log('successful post');
-      this.setState({signupComplete: true})
+      this.setState({nameAndPhoneComplete: true})
     })
     .catch(function(error) {
       console.log(error);
@@ -91,13 +92,13 @@ class NameAndPhone extends React.Component {
           />
           <RaisedButton label="Save" primary={true} style={style} onClick={this.handleClick}/>
         </div>
-      : <Redirect to='NameAndPhone' />
+      : <Redirect to='Address' />
     )
   }
 }
 
 const mapStateToProps = state => ({
-  email: state.email,
+  id: state.profile.id,
 });
 
 export default withRouter(connect(mapStateToProps)(NameAndPhone));

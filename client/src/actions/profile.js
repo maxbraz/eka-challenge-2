@@ -15,22 +15,11 @@ export const updateError = message => ({
   message,
 });
 
-export const updateProfile = profile => (dispatch) => {
-  dispatch(requestUpdate());
+export const updateProfile = (id) => {
+  // dispatch(requestUpdate());
 
-  const headers = {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  };
-
-  const options = {
-    method: 'POST',
-    body: JSON.stringify(profile),
-    headers,
-  };
-
-  return fetch('/signup', options)
-    .then(res => res.text())
-    .then(() => dispatch(receiveUpdate()))
-    .catch(err => dispatch(updateError(err)));
+  return {
+    type: 'UPDATE_REQUEST',
+    payload: id,
+  }
 };

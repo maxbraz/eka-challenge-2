@@ -8,7 +8,7 @@ const nameAndPhone = (state = {
   isFetching: false,
   hasSaved: false,
   errorMessage: '',
-  userId: null,
+  id: '',
 }, action) => {
   switch (action.type) {
   case NAMEANDPHONE_REQUEST:
@@ -22,7 +22,7 @@ const nameAndPhone = (state = {
       isFetching: false,
       hasSaved: true,
       errorMessage: '',
-      userId: action.userId,
+      id: action.id,
     };
   case NAMEANDPHONE_FAILURE:
     return {

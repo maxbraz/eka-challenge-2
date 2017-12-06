@@ -29,13 +29,13 @@ app.post('/signup', (req, res) => {
 });
 
 app.post('/address', (req, res) => {
-  const currentProfile = Profile.where({email: req.body.email}).fetch()
+  const currentProfile = Profile.where({id: req.body.id}).fetch()
     .then((profile) => {
       if (!profile) {
         throw profile;
       }
 
-      profile.forge({
+      profile.set({
         street: req.body.street,
         city: req.body.city,
         state: req.body.state,
@@ -55,13 +55,14 @@ app.post('/address', (req, res) => {
 });
 
 app.post('/nameAndPhone', (req, res) => {
-  const currentProfile = Profile.where({email: req.body.email}).fetch()
+  const currentProfile = Profile.where({id: req.body.id}).fetch()
     .then((profile) => {
+
       if (!profile) {
         throw profile;
       }
 
-      profile.forge({
+      profile.set({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         phoneNumber: req.body.phoneNumber
@@ -71,9 +72,6 @@ app.post('/nameAndPhone', (req, res) => {
         res.status(201).send(result.omit('password'));
       })
       .catch(err => {
-        if (err.constraint === 'users_username_unique') {
-          return res.status(403);
-        }
         res.status(500).send(err);
       });
     });

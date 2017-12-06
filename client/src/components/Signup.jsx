@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { Link, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
 import { updateProfile } from '../actions';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -19,6 +19,7 @@ class Signup extends React.Component {
       username: '',
       password: '',
       email: '',
+      id: '',
       signupComplete: false,
     };
 
@@ -29,18 +30,16 @@ class Signup extends React.Component {
 
   send() {
     const { dispatch } = this.props;
-
-    const profile = {
-      email: this.state.email,
-    };
+    const id = this.state.id;
 
     this.setState({
       username: '',
       password: '',
       email: '',
+      id: '',
     });
 
-    dispatch(updateProfile(profile));
+    dispatch(updateProfile(id));
   }
 
   handleChange(event) {
@@ -62,9 +61,11 @@ class Signup extends React.Component {
 
     axios.post('/signup', params)
     .then((response) => {
-      console.log('successful post');
+      console.log('successful post: ', response);
+      this.setState({id: response.data.id});
       this.send();
-      this.setState({signupComplete: true})
+    }).then((sent) => {
+      this.setState({signupComplete: true});
     })
     .catch(function(error) {
       console.log(error);
@@ -116,7 +117,7 @@ class Signup extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  email: state.email,
+  id: state.id,
 });
 
 export default withRouter(connect(mapStateToProps)(Signup));

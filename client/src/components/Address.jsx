@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { withRouter } from 'react-router';
+import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -17,7 +19,7 @@ class Address extends React.Component {
       city: '',
       state: '',
       zip: '',
-      profileComplete: false,
+      addressComplete: false,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -39,12 +41,13 @@ class Address extends React.Component {
       city: this.state.city,
       state: this.state.state,
       zip: this.state.zip,
+      id: this.props.id,
     }
 
     axios.post('/signup', params)
     .then((response) => {
       console.log('successful post');
-      this.setState({signupComplete: true})
+      this.setState({addressComplete: true})
     })
     .catch(function(error) {
       console.log(error);
@@ -53,7 +56,7 @@ class Address extends React.Component {
 
   render () {
     return (
-      !this.state.profileComplete ?
+      !this.state.addressComplete ?
         <div>
           <TextField
             fullWidth
@@ -106,4 +109,8 @@ class Address extends React.Component {
   }
 }
 
-export default Address;
+const mapStateToProps = state => ({
+  id: state.profile.id,
+});
+
+export default withRouter(connect(mapStateToProps)(Address));

@@ -5,29 +5,23 @@ import {
 } from '../actions';
 
 const signup = (state = {
-  isFetching: false,
-  hasSaved: false,
-  errorMessage: '',
-  email: null,
+  id: '',
 }, action) => {
   switch (action.type) {
   case UPDATE_REQUEST:
     return {
       ...state,
       isFetching: true,
+      id: action.payload
     };
   case UPDATE_SUCCESS:
     return {
       ...state,
-      isFetching: false,
-      hasSaved: true,
-      errorMessage: '',
-      email: action.email,
+      id: action.payload,
     };
   case UPDATE_FAILURE:
     return {
       ...state,
-      isFetching: false,
       errorMessage: action.message,
     };
   default:
