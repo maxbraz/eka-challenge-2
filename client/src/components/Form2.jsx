@@ -6,11 +6,23 @@ const style = {
   margin: 12,
 };
 
-const Form2 = () => (
-  <div>
-    <h3>form 2</h3>
-    <RaisedButton label="Next" primary={true} style={style} />
-  </div>
-)
+class Form2 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+    };
+  }
+
+  render () {
+    return (
+      <div>
+        <RaisedButton label="Next" primary={true} style={style} />
+      </div>
+    )
+  }
+}
 
 export default Form2;

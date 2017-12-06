@@ -9,6 +9,10 @@ class Form3 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      street: '',
+      city: '',
+      state: '',
+      zip: '',
     }
   }
 

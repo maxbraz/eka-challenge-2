@@ -2434,50 +2434,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _RaisedButton = __webpack_require__(35);
-
-var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var style = {
-  margin: 12
-};
-
-var Form2 = function Form2() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'h3',
-      null,
-      'form 2'
-    ),
-    _react2.default.createElement(_RaisedButton2.default, { label: 'Next', primary: true, style: style })
-  );
-};
-
-exports.default = Form2;
-
-/***/ }),
+/* 66 */,
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3175,8 +3132,6 @@ module.exports = exports['default'];
 "use strict";
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -3185,83 +3140,29 @@ var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Form = __webpack_require__(99);
+var _LandingPage = __webpack_require__(212);
 
-var _Form2 = _interopRequireDefault(_Form);
-
-var _Form3 = __webpack_require__(66);
-
-var _Form4 = _interopRequireDefault(_Form3);
-
-var _Form5 = __webpack_require__(165);
-
-var _Form6 = _interopRequireDefault(_Form5);
-
-var _data = __webpack_require__(166);
-
-var _data2 = _interopRequireDefault(_data);
-
-var _reactTapEventPlugin = __webpack_require__(167);
-
-var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
+var _LandingPage2 = _interopRequireDefault(_LandingPage);
 
 var _MuiThemeProvider = __webpack_require__(172);
 
 var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
 
-var _RaisedButton = __webpack_require__(35);
+var _reactTapEventPlugin = __webpack_require__(167);
 
-var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 (0, _reactTapEventPlugin2.default)();
 
-var style = {
-  margin: 12
+var App = function App() {
+  return _react2.default.createElement(
+    _MuiThemeProvider2.default,
+    null,
+    _react2.default.createElement(_LandingPage2.default, null)
+  );
 };
-
-var App = function (_React$Component) {
-  _inherits(App, _React$Component);
-
-  function App(props) {
-    _classCallCheck(this, App);
-
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-    _this.state = {
-      items: _data2.default
-    };
-    return _this;
-  }
-
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _MuiThemeProvider2.default,
-        null,
-        _react2.default.createElement(
-          'h1',
-          null,
-          ' EKA Challenge '
-        ),
-        _react2.default.createElement(_RaisedButton2.default, { label: 'Create Profile', primary: true, style: style, fullWidth: true }),
-        _react2.default.createElement(_Form2.default, null),
-        _react2.default.createElement(_Form4.default, null),
-        _react2.default.createElement(_Form6.default, null)
-      );
-    }
-  }]);
-
-  return App;
-}(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
 
@@ -20509,54 +20410,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Form = __webpack_require__(66);
-
-var _Form2 = _interopRequireDefault(_Form);
-
-var _RaisedButton = __webpack_require__(35);
-
-var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var style = {
-  margin: 12
-};
-
-var Form1 = function Form1() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'h2',
-      null,
-      'Form 1'
-    ),
-    _react2.default.createElement(_RaisedButton2.default, { label: 'Next', primary: true, style: style })
-  );
-};
-
-exports.default = Form1;
-
-/***/ }),
+/* 99 */,
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24649,78 +24503,8 @@ exports.default = {
 };
 
 /***/ }),
-/* 165 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _RaisedButton = __webpack_require__(35);
-
-var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var style = {
-  margin: 12
-};
-
-var Form3 = function (_React$Component) {
-  _inherits(Form3, _React$Component);
-
-  function Form3(props) {
-    _classCallCheck(this, Form3);
-
-    var _this = _possibleConstructorReturn(this, (Form3.__proto__ || Object.getPrototypeOf(Form3)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Form3, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'h4',
-          null,
-          'form 3'
-        ),
-        _react2.default.createElement(_RaisedButton2.default, { label: 'Next', primary: true, style: style })
-      );
-    }
-  }]);
-
-  return Form3;
-}(_react2.default.Component);
-
-exports.default = Form3;
-
-/***/ }),
-/* 166 */
-/***/ (function(module, exports) {
-
-module.exports = [{"username":"bart","password":"monkey","email":"braz.max@gmail.com","firstName":"bart","lastName":"braz","telephone":"415-969-1540","street":"541 Monterey Rd.","city":"Pacifica","state":"CA","zip":94044},{"username":"lili","password":"giraffe","email":"braz.max@gmail.com","firstName":"lili","lastName":"braz","telephone":"415-969-1540","street":"541 Monterey Rd.","city":"Pacifica","state":"CA","zip":94044},{"username":"ray","password":"elephant","email":"braz.max@gmail.com","firstName":"ray","lastName":"braz","telephone":"415-969-1540","street":"541 Monterey Rd.","city":"Pacifica","state":"CA","zip":94044},{"username":"venus","password":"tiger","email":"braz.max@gmail.com","firstName":"venus","lastName":"braz","telephone":"415-969-1540","street":"541 Monterey Rd.","city":"Pacifica","state":"CA","zip":94044},{"username":"biff","password":"hippo","email":"braz.max@gmail.com","firstName":"biff","lastName":"braz","telephone":"415-969-1540","street":"541 Monterey Rd.","city":"Pacifica","state":"CA","zip":94044}]
-
-/***/ }),
+/* 165 */,
+/* 166 */,
 /* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30292,6 +30076,87 @@ var Typography = function Typography() {
 };
 
 exports.default = new Typography();
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(7);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Paper = __webpack_require__(162);
+
+var _Paper2 = _interopRequireDefault(_Paper);
+
+var _RaisedButton = __webpack_require__(35);
+
+var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var style = {
+  button: {
+    margin: 12
+  },
+  paper: {
+    height: '645px',
+    textAlign: 'center',
+    display: 'inline-block'
+  }
+};
+
+var LandingPage = function (_React$Component) {
+  _inherits(LandingPage, _React$Component);
+
+  function LandingPage(props) {
+    _classCallCheck(this, LandingPage);
+
+    var _this = _possibleConstructorReturn(this, (LandingPage.__proto__ || Object.getPrototypeOf(LandingPage)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(LandingPage, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h1',
+          null,
+          ' Welcome to EKA '
+        ),
+        _react2.default.createElement(_RaisedButton2.default, { label: 'Create Your Profile', primary: true, style: style.button })
+      );
+    }
+  }]);
+
+  return LandingPage;
+}(_react2.default.Component);
+
+exports.default = LandingPage;
 
 /***/ })
 /******/ ]);
