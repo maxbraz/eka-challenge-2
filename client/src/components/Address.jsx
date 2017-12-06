@@ -44,9 +44,9 @@ class Address extends React.Component {
       id: this.props.id,
     }
 
-    axios.post('/signup', params)
+    axios.post('/address', params)
     .then((response) => {
-      console.log('successful post');
+      console.log('successful address post');
       this.setState({addressComplete: true})
     })
     .catch(function(error) {
