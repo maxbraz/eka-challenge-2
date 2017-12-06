@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import {Card, CardActions, CardHeader, CardMedia} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const style = {
+  button: {
+    margin: 12,
+  },
+  paper: {
+    height: '645px',
+    textAlign: 'center',
+    display: 'inline-block'
+  }
+};
 
 const Profile = () => (
-    <div>
-      <h1> CONGRATS, YOUR PROFILE IS COMPLETE </h1>
-    </div>
+  <Card>
+    <CardHeader
+      title="Your Profile is Complete!"
+    />
+    <CardMedia>
+      <img src="http://i0.kym-cdn.com/photos/images/facebook/000/011/296/success_baby.jpg" />
+    </CardMedia>
+    <CardActions>
+      <RaisedButton label="Home" primary={true} style={style.button} />
+    </CardActions>
+  </Card>
 );
 
 export default Profile;
