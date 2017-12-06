@@ -1,3 +1,10 @@
+# Startup Instructions
+
+npm run start:dev
+npm run build:watch
+npm run migrate:latest
+open localhost:3000
+
 # EKA TECHNICAL CHALLENGE - 2
 
 
