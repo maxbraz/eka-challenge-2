@@ -5,6 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { updateProfile } from '../actions';
+import emailRegex from 'email-regex';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
@@ -37,6 +38,8 @@ class Signup extends React.Component {
       password: '',
       email: '',
       id: '',
+      errorText: '',
+      emailIsValid: true,
     });
 
     dispatch(updateProfile(id));
@@ -53,6 +56,14 @@ class Signup extends React.Component {
   }
 
   handleClick() {
+    if (!emailRegex({exact: true}).test(this.state.email)) {
+      this.setState({
+        emailIsValid: false,
+        errorText: 'the email you entered is not valid',
+      });
+      return;
+    }
+
     let params = {
       username: this.state.username,
       password: this.state.password,
@@ -105,6 +116,7 @@ class Signup extends React.Component {
             id="email"
             type="text"
             name="email"
+            errorText={this.state.errorText}
             onChange={this.handleChange}
             floatingLabelFocusStyle={{ color: 'rgb(255, 64, 129)' }}
             underlineFocusStyle={{ borderBottomColor: 'rgb(255, 64, 129)' }}

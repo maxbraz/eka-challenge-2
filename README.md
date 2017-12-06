@@ -1,12 +1,12 @@
 # Startup Instructions
 
-git clone repo
-cd into repo
-npm install all dependencies
-npm run start:dev
-npm run build:watch
-npm run migrate:latest
-open localhost:3000
+$ git clone https://github.com/maxbraz/eka-challenge-2
+$ cd eka-challenge-2
+$ npm install
+$ npm run start:dev
+$ npm run build:watch
+$ npm run migrate:latest
+open localhost:3000/ in your browser
 
 # EKA TECHNICAL CHALLENGE - 2
 

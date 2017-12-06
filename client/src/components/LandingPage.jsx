@@ -19,14 +19,20 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      wasClicked: false
+      wasClicked: false,
+      isUser: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
   }
 
   handleClick() {
     this.setState({wasClicked: true});
+  }
+
+  handleLogin() {
+    this.setState({isUser: true});
   }
 
   render () {
@@ -35,6 +41,7 @@ class LandingPage extends React.Component {
         <div>
           <h1> Welcome to EKA </h1>
           <RaisedButton label="Create Your Profile" primary={true} style={style.button} onClick={this.handleClick} />
+          <RaisedButton label="Login" primary={true} style={style.button} onClick={this.handleLogin} />
         </div>
       : <Redirect to='Signup' />
     )
