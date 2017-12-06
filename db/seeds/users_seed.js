@@ -1,5 +1,5 @@
-const seedUsers = require('./helpers/seedUsers.js');
+const Profile = require('./helpers/seedUsers.js');
 
 exports.seed = (knex, Promise) => (
-  seedUsers
+  Profile
 );
