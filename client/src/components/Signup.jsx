@@ -4,6 +4,7 @@ import axios from 'axios';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
+import { updateProfile } from '../actions';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
@@ -26,13 +27,10 @@ class Signup extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-
   send() {
     const { dispatch } = this.props;
 
     const profile = {
-      username: this.state.username,
-      password: this.state.password,
       email: this.state.email,
     };
 

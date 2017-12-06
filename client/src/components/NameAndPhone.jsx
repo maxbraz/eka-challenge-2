@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { withRouter } from 'react-router';
+import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -94,4 +96,8 @@ class NameAndPhone extends React.Component {
   }
 }
 
-export default NameAndPhone;
+const mapStateToProps = state => ({
+  email: state.email,
+});
+
+export default withRouter(connect(mapStateToProps)(NameAndPhone));

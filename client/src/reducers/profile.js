@@ -8,7 +8,7 @@ const signup = (state = {
   isFetching: false,
   hasSaved: false,
   errorMessage: '',
-  userId: null,
+  email: null,
 }, action) => {
   switch (action.type) {
   case UPDATE_REQUEST:
@@ -22,7 +22,7 @@ const signup = (state = {
       isFetching: false,
       hasSaved: true,
       errorMessage: '',
-      userId: action.userId,
+      email: action.email,
     };
   case UPDATE_FAILURE:
     return {
